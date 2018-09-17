@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>老屋talk-福憩背包客棧</title>
+    <style>
+        * {
+            border: 0px solid black;
+        }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://s3.amazonaws.com/codecademy-content/courses/ltp2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="article.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/message.css" />
+
+    <link rel="stylesheet" type="text/css" href="assets/css/main_front.css">
+    <!-- <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'> -->
+
+
+
+</head>
+
+<body>
+
+    <!--導覽列-->
+    <nav class="Rectangle-311">
+        <div class="container flex-between ">
+            <div class="logo">
+                <a href="../../index.html">
+                    <img src="assets/media/logo.png" alt="logo" class="logo">
+                </a>
+            </div>
+
+
+            <ul class="flex-between " id="topMenu">
+                <li class="active">
+                    <a href="../../page1/blog.html">Blog</a>
+                </li>
+                <li>
+                    <a href="../../page2/talk.html">Let's Talk</a>
+                </li>
+                <li>
+                    <a href="#about">About Us</a>
+                </li>
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
+            <button class="ham" onclick="toggleMenu()">☰</button>
+        </div>
+    </nav>
+    <!--導覽列-->
+
+    <div class="cen">
+        <div class="container m-5">
+            <div class="row">
+                <div class="col-8 align-center">
+                    <img src='drawing/fuki_large.svg' width="260">
+                    <div class="tx-cen">
+
+                        <span class="sub">
+                            福憩，是飄泊旅人的安然所在，
+                            <br> 可以暢談所嚮往的幸福，可以尋覓一處寧靜的休憩，
+                            <br> 就背起背包出走，去找尋迷失的自我！
+
+                        </span>
+
+                        <hr style="text-align:right;margin-right:0" width="5%" />
+                    </div>
+
+
+                </div>
+                <div class="col-4 info ">
+
+                    <h1>福憩背包客棧</h1>
+                    <br>
+                    <br>
+                    <span>
+                        <div class="row sub">
+                            <div class="col-6">
+                                屋齡
+                                <br> 建築類型
+                                <br> 經營者
+                                <br> 經營類型
+                                <br> 創立時間
+                            </div>
+                            <div class="col-6 card-info">
+                                約70年(光復初期)
+                                <br> 連棟街屋
+                                <br> 柯凱文(Kevin)
+                                <br> 背包客棧
+                                <br> 2011
+                            </div>
+                        </div>
+                    </span>
+                    <span>
+                        <br><br><br><br><br><br>
+                        <a href="https://www.facebook.com/fuqitainanhostel.tw/">
+                            <img src='link/fb.png' width="30">
+                            <u>福憩背包客棧</u>
+                            <br>
+                        </a>
+                    </span>
+                    <span>
+                        <img src="https://png.icons8.com/doodle/96/000000/marker.png" width="30"> 台南市中西區和平街91號
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="container m-5">
+        <div class="row">
+            <div class="col-3 article-catagory">
+                <ul>
+                    <br><br><br><br>
+                    <button id="firstpart" onclick="displaytext(this)"><h4>改 造 過 程</h4></button>
+                    <button id="secondpart" onclick="displaytext(this)"><h4>經 營 歷 程</h4></button>
+                    <button id="thirdpart" onclick="displaytext(this)"><h4>成 功 要 素</h4></button>
+                </ul>
+            </div>
+
+            <div class="col-1"></div>
+
+            <div class="col-8 article-text">
+                <div id="demo1">
+                    <div class="on-state">
+                        <img src='drawing/fuki-no-back.png' style="width: 100%">
+                        <h3>去蕪存菁、舊物再利用</h3>
+                        <p>
+                            <p>&nbsp;</p>
+                            <p><span style="color: #808080;">" 福憩的改造是透過設計師團隊來執行Kevin的構想，Kevin的首要考量便是安全與老屋元素保留，以及維持風格一致性。 "</span></p>
+                            <p>- 拆除 &amp; 結構：在一樓進行鋼樑架設，並將屋頂的橫樑柱換新，另外，由於原有的屋頂的鐵皮外層和元素意象太過衝突，改為傳統式屋瓦</p>
+                        </p>
+                        <button class="btn-open btn">[ 展開閱讀 ]</button>
+                    </div>
+
+                    <div class="off-state" style="display: none;">
+                        <p>
+                            <p>- 水電 &amp; 泥作：電線的舊管線埋於牆壁，若從舊有管線更改須將房子全打掉，工程浩大，故而將管線整個重做及外露，以工業風設計維持整體視覺。</p>
+                            <p>房屋原有的化糞池位在屋子後方廁所的正下方，考量使用人數與化糞池大小，修建時將其打掉再重埋新的於旁邊空地。</p>
+                            <p>改造過程Kevin亦親自投入整修，整棟皆由他自己進行完整的防水工程，以及部分的牆壁油漆，並透過觀摩學習怎麼貼磁磚，種種的施工參與經驗也讓他在緣憩的改造上更駕輕就熟，甚至自己來節省不少開支。</p>
+                            <br>
+                        </p>
+                        <h3>空間規劃</h3>
+                        <p>福憩和平館是一棟&nbsp;60年以上歷史的老房子，老闆Kevin盡可能保留老屋外觀的原始風貌，在符合安全考量範圍內，保持內部構造的完整性，雕花樓梯扶手、紅綠碎石磁磚，還有木頭窗櫺，&nbsp;處處充滿老屋風情。</p>
+                        <p>&nbsp;</p>
+                        <p><span style="color: #808080;">| 挖土水挖到半邊井</span></p>
+                        <p>一樓的前身為鐵工廠，Kevin同樣融入既有的鐵工廠元素，將展現精湛鐵工技術的樓梯扶手重新打亮，並以英倫工業風格進行室內裝潢，以往被認為影響視覺的管線在經過設計後，反而成為最貼切與實用的裝飾，而整修時意外發現的半邊井，則成為一樓空間的另一大亮點！</p>
+                        <p>除了自清朝留下的半邊井，同一側的牆面也以清朝磚頭進行鋪設，讓空間又增添幾分古早味，這樣的設計源自於Kevin的惜物與精心，2016年的台南大地震使得客棧後方的房屋倒塌，老闆主動向屋主要求清理，撿回可用的磚頭拼成這片美麗磚牆，甚至成為廁所擺設的妝點。這場地震裡，福憩受到輕微影響，地板多了些許裂縫，為此，Kevin和打工換宿的學生一同發想，繪製了三葉蟲從地底鑽出的畫面，讓線條變的自然。</p>
+                        <p>&nbsp;</p>
+                        <p><span style="color: #808080;">| 舊物利用，更添老蘊</span></p>
+                        <p>福憩處處充滿Kevin的巧思，從設計到使用規劃都可以看到他對客棧經營的用心，一進門便有行李寄放區與旅遊資訊區，並規劃貼心的自助商店與未來信箱，以及設有寬敞的自助吧台與閱讀角，不只如此，每一樣傢具都和整個空間相互映襯，以舊樑柱改造的屏風、檜木製的良心商店櫥櫃、運用整修時拆卸下來的木料作成的交誼桌、放置於閱讀角擺設的清朝木門&hellip;&hellip;，都展現了Kevin對於老物與木頭的喜愛。</p>
+                        <p>&nbsp;</p>
+                        <p><span style="color: #808080;">| 充分運用空間</span></p>
+                        <p>二樓有三間2~3坪的房間，是原有的規格大小，現在將其改為上下舖的旅客房間，新舖設檜木床板以及置物櫃，讓整個房間充滿著檜木的香氣。走廊間貼滿了五條港意象的馬賽克磁磚，令人彷彿進入到了往昔，福憩所在的和平街便是以前新港墘港的通商水道，充斥著古庶民的生活氛圍，前後陽台則布滿了綠意與古樸。</p>
+                        <p>三樓規劃為多人的房型：雙人的和室及上下舖、三人的通鋪、十人的閣樓床位，並有室外露臺，可以望見喧鬧的海安路，同時也是老闆的木工小天地。</p>
+
+
+                        <button class="btn-close btn" style="display: none;">[ 收起閱讀 ] </button>
+                    </div>
+                    <!-- <span class="off-element">收起閱讀</span> -->
+                </div>
+                <!-- <p id="demo1"></p> -->
+                <!-- <iframe src="test.html"  width="700" height="200" scrolling="no"></iframe> -->
+            </div>
+        </div>
+        </span>
+    </div>
+    <section class="gallery-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <!-- Gallery -->
+                    <section id="galleries">
+
+                        <!-- Photo Galleries -->
+                        <div class="gallery">
+
+                            </header>
+                            <div class="content">
+                                <div class="media">
+                                    <a href="images/fulls/b一樓空間結構與管線改造對照.png">
+                                        <img src="images/fulls/b一樓空間結構與管線改造對照.png" alt="" title="一樓空間結構與管線改造對照" />
+                                    </a>
+                                </div>
+                                <!-- <div class="media">
+                                    <a href="images/fulls/b入口可見植栽與美麗的鐵花窗.jpg">
+                                        <img src="images/fulls/b入口可見植栽與美麗的鐵花窗.jpg" alt="" title="入口可見植栽與美麗的鐵花窗" />
+                                    </a>
+                                </div> -->
+                                <div class="media">
+                                    <a href="images/fulls/b鄰近樓房拆除的磚塊成為廁所一角的盆栽平台.jpg">
+                                        <img src="images/fulls/b鄰近樓房拆除的磚塊成為廁所一角的盆栽平台.jpg" alt="" title="鄰近樓房拆除的磚塊成為廁所一角的盆栽平台" />
+                                    </a>
+                                </div>
+                                <div class="media">
+                                    <a href="images/fulls/b一樓大廳入口空間可見舊時屋頂木架組成的屏風.png">
+                                        <img src="images/fulls/b一樓大廳入口空間可見舊時屋頂木架組成的屏風.png" alt="" title="一樓大廳入口空間可見舊時屋頂木架組成的屏風" />
+                                    </a>
+                                </div>
+                                <div class="media">
+                                    <a href="images/fulls/b一樓空間改造.png">
+                                        <img src="images/fulls/b一樓空間改造.png" alt="" title="一樓空間改造" />
+                                    </a>
+                                </div>
+                                <div class="media">
+                                    <a href="images/fulls/b老屋整建時意外發現一口井_也成為一樓空間的亮點.jpg">
+                                        <img src="images/fulls/b老屋整建時意外發現一口井_也成為一樓空間的亮點.jpg" alt="" title="老屋整建時意外發現一口井_也成為一樓空間的亮點" />
+                                    </a>
+                                </div>
+                                <div class="media">
+                                    <a href="images/fulls/b三樓的閣樓床位改造.png">
+                                        <img src="images/fulls/b三樓的閣樓床位改造.png" alt="" title="三樓的閣樓床位改造" />
+                                    </a>
+                                </div>
+
+                                <div class="media">
+                                    <a href="images/fulls/入口可見植栽與美麗的鐵花窗.jpg">
+                                        <img src="images/fulls/入口可見植栽與美麗的鐵花窗.jpg" alt="" title="入口可見植栽與美麗的鐵花窗" />
+                                    </a>
+                                </div>
+                                <div class="media">
+                                    <a href="images/fulls/入口玄關地面的彩繪都是來打工換宿旅客的傑作.jpg">
+                                        <img src="images/fulls/入口玄關地面的彩繪都是來打工換宿旅客的傑作.jpg" alt="" title="入口玄關地面的彩繪都是來打工換宿旅客的傑作" />
+                                    </a>
+                                </div>
+                                <div class="media">
+                                    <a href="images/fulls/交誼區的閱讀角因為一扇木門而古意盎然.jpg">
+                                        <img src="images/fulls/交誼區的閱讀角因為一扇木門而古意盎然.jpg" alt="" title="交誼區的閱讀角因為一扇木門而古意盎然" />
+                                    </a>
+                                </div>
+                                <div class="media">
+                                    <a href="images/fulls/老闆時常透過不同的巧思創造小活動與驚喜_比如入口的良心商店設計.jpg">
+                                        <img src="images/fulls/老闆時常透過不同的巧思創造小活動與驚喜_比如入口的良心商店設計.jpg" alt="" title="老闆時常透過不同的巧思創造小活動與驚喜_比如入口的良心商店設計" />
+                                    </a>
+                                </div>
+                                <div class="media">
+                                    <a href="images/fulls/老屋整建時意外發現一口井_也成為一樓空間的亮點.jpg">
+                                        <img src="images/fulls/老屋整建時意外發現一口井_也成為一樓空間的亮點.jpg" alt="" title="老屋整建時意外發現一口井_也成為一樓空間的亮點" />
+                                    </a>
+                                </div>
+                                <div class="media">
+                                    <a href="images/fulls/拆除的磚塊成為廁所一角的盆栽平台.jpg">
+                                        <img src="images/fulls/拆除的磚塊成為廁所一角的盆栽平台.jpg" alt="" title="拆除的磚塊成為廁所一角的盆栽平台" />
+                                    </a>
+                                </div>
+                                <div class="media">
+                                    <a href="images/fulls/洗手台_由窗框拆解改建的鏡子.jpg">
+                                        <img src="images/fulls/洗手台_由窗框拆解改建的鏡子.jpg" alt="" title="洗手台_由窗框拆解改建的鏡子" />
+                                    </a>
+                                </div>
+                                <!-- <div class="media">
+                                    <a href="images/fulls/懷舊感強烈的天花與燈具.jpg">
+                                        <img src="images/fulls/懷舊感強烈的天花與燈具.jpg" alt="" title="懷舊感強烈的天花與燈具" />
+                                    </a>
+                                </div>
+                                <div class="media">
+                                    <a href="images/fulls/翻修後新配置的管線也條理分明.jpg">
+                                        <img src="images/fulls/翻修後新配置的管線也條理分明.jpg" alt="" title="翻修後新配置的管線也條理分明" />
+                                    </a>
+                                </div>
+                                <div class="media">
+                                    <a href="images/fulls/老闆與其他縣市的背包客棧結盟_未來希望能發起環島背包客之旅的壯遊活動.jpg">
+                                        <img src="images/fulls/老闆與其他縣市的背包客棧結盟_未來希望能發起環島背包客之旅的壯遊活動.jpg" alt="" title="老闆與其他縣市的背包客棧結盟_未來希望能發起環島背包客之旅的壯遊活動" />
+                                    </a>
+                                </div>
+                                <div class="media">
+                                    <a href="images/fulls/注重品質的老闆得到許多旅遊網站的好評.jpg">
+                                        <img src="images/fulls/注重品質的老闆得到許多旅遊網站的好評.jpg" alt="" title="注重品質的老闆得到許多旅遊網站的好評" />
+                                    </a>
+                                </div>
+                                <div class="media">
+                                    <a href="images/fulls/五條港的馬賽克拼貼意象.jpg">
+                                        <img src="images/fulls/五條港的馬賽克拼貼意象.jpg" alt="" title="五條港的馬賽克拼貼意象" />
+                                    </a>
+                                </div> -->
+                                <!-- <div class="media">
+                                    <a href="images/fulls/美麗的磨石子樓梯_盡可能保留原狀的修建.jpg">
+                                        <img src="images/fulls/美麗的磨石子樓梯_盡可能保留原狀的修建.jpg" alt="" title="美麗的磨石子樓梯，盡可能保留原狀的修建" />
+                                    </a>
+                                </div>
+                                <div class="media">
+                                    <a href="images/fulls/二樓床位_以上下舖為主.jpg">
+                                        <img src="images/fulls/二樓床位_以上下舖為主.jpg" alt="" title="二樓床位，以上下舖為主" />
+                                    </a>
+                                </div>
+                                <div class="media">
+                                    <a href="images/fulls/二樓的彩繪同樣也來自換宿遊客的創作.jpg">
+                                        <img src="images/fulls/二樓的彩繪同樣也來自換宿遊客的創作.jpg" alt="" title="二樓的彩繪同樣也來自換宿遊客的創作" />
+                                    </a>
+                                </div>
+                                <div class="media">
+                                    <a href="images/fulls/二樓前陽台.jpg">
+                                        <img src="images/fulls/二樓前陽台.jpg" alt="" title="二樓前陽台" />
+                                    </a>
+                                </div>
+                                <div class="media">
+                                    <a href="images/fulls/二樓後陽台.jpg">
+                                        <img src="images/fulls/二樓後陽台.jpg" alt="" title="二樓後陽台" />
+                                    </a>
+                                </div>
+                                <div class="media">
+                                    <a href="images/fulls/後陽台區域_也是二樓梳洗的地方.jpg">
+                                        <img src="images/fulls/後陽台區域_也是二樓梳洗的地方.jpg" alt="" title="後陽台區域，也是二樓梳洗的地方" />
+                                    </a>
+                                </div>
+                                <div class="media">
+                                    <a href="images/fulls/三樓的閣樓床位.jpg">
+                                        <img src="images/fulls/三樓的閣樓床位.jpg" alt="" title="三樓的閣樓床位" />
+                                    </a>
+                                </div>
+                                <div class="media">
+                                    <a href="images/fulls/三樓雙人雅房一角.jpg">
+                                        <img src="images/fulls/三樓雙人雅房一角.jpg" alt="" title="三樓雙人雅房一角" />
+                                    </a>
+                                </div>
+                                <div class="media">
+                                    <a href="images/fulls/三樓露臺放有熱愛手做的老闆的木工切割台.jpg">
+                                        <img src="images/fulls/三樓露臺放有熱愛手做的老闆的木工切割台.jpg" alt="" title="三樓露臺放有熱愛手做的老闆的木工切割台" />
+                                    </a>
+                                </div>
+                                <div class="media">
+                                    <a href="images/fulls/三樓的地面彩繪_以台灣與世界地圖為主題.jpg">
+                                        <img src="images/fulls/三樓的地面彩繪_以台灣與世界地圖為主題.jpg" alt="" title="三樓的地面彩繪，以台灣與世界地圖為主題" />
+                                    </a>
+                                </div>
+                                <div class="media">
+                                    <a href="images/fulls/側邊的立面可見鄰房拆除的痕跡.jpg">
+                                        <img src="images/fulls/側邊的立面可見鄰房拆除的痕跡.jpg" alt="" title="側邊的立面可見鄰房拆除的痕跡" />
+                                    </a>
+                                </div>
+                                <div class="media">
+                                    <a href="images/fulls/從後陽台可見院子拔地而起的樹木.jpg">
+                                        <img src="images/fulls/從後陽台可見院子拔地而起的樹木.jpg" alt="" title="從後陽台可見院子拔地而起的樹木" />
+                                    </a>
+                                </div> -->
+
+                            </div>
+
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- <div class="container m-5">
+        <div class="row">
+            <div class="col-lg">
+                col is auto width
+            </div>
+            <div class="col-lg-8">
+                col for 8
+            </div>
+            <div class="col-lg">
+                col is auto width
+            </div>
+        </div>
+    </div> -->
+    <div class="container3">
+        <h2 class="messagetitle">留言板</h2>
+
+        <form>
+            <div class="form-group">
+                name:
+                <textarea class="form-control status-box status-box1" rows="1" placeholder="您的大名" style="width:200px" style="background-color:#000000;"></textarea>
+            </div>
+            <div class="form-group">
+                comment:
+                <textarea class="form-control status-box status-box2" rows="4" placeholder="說說您的看法吧"></textarea>
+            </div>
+        </form>
+        <div class="button-group pull-right">
+            <p class="counter">200</p>
+            <a href="#" class="btn-submit btn btn-primary">發表</a>
+            <br>
+        </div>
+
+        <ul class="posts">
+        </ul>
+    </div>
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.poptrox.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!-- message -->
+    <!-- <script src="assets/js/message.js"></script> -->
+    <!-- <script src='https://code.jquery.com/jquery-2.1.4.min.js'></script> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
+    <script src="assets/js/message.js"></script>
+    <!-- message -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script>
+        // $("[data-js=expand-story]").on('click', function () {
+        //     var $this = $(this);
+        //     var $target = $($this.data('expand'));
+        //     var $last_pos = $target.offset().top - 250;
+        //     $target.slideToggle({
+        //         done: function () {
+        //             console.log($target.css('display'));
+        //             if ($target.css('display') === 'none') {
+        //                 console.log('scroll back');
+        //                 console.log($last_pos);
+        //                 $('body,html').animate({
+        //                     scrollTop: $last_pos
+        //                 });
+        //             }
+        //         }
+        //     });
+        //     return false;
+
+        // });
+
+
+        // $('.on-off-states').on('click', function () {
+        //     $(this).toggleClass('on-state');
+        //     $(this).toggleClass('off-state');
+        //     return false;
+        // });
+
+        $("body").delegate("button.btn-open", "click", function() {
+            // $($("button.open").click(function () {
+            console.log("123")
+            $(".btn-open").toggle();
+            $(".btn-close").toggle();
+            $(".off-state").toggle();
+
+        });
+        $("body").delegate("button.btn-close", "click", function() {
+
+            // $("button.btn-close").click(function () {
+            console.log("123")
+            $(".btn-open").toggle();
+            $(".btn-close").toggle();
+            $(".off-state").toggle();
+        });
+
+        function displaytext(elem) {
+            if (elem.id == "firstpart") {
+                document.getElementById("demo1").innerHTML =
+                    `
+                                                        <div class="on-state">
+                        <img src='drawing/fuki-no-back.png'  style="width: 100%">
+                        <h2>去蕪存菁、舊物再利用</h2>
+                        <p>
+                                <p>&nbsp;</p>
+                                <p><span style="color: #808080;">" 福憩的改造是透過設計師團隊來執行Kevin的構想，Kevin的首要考量便是安全與老屋元素保留，以及維持風格一致性。 "</span></p>
+                                <p>- 拆除 &amp; 結構：在一樓進行鋼樑架設，並將屋頂的橫樑柱換新，另外，由於原有的屋頂的鐵皮外層和元素意象太過衝突，改為傳統式屋瓦</p>
+                        </p>
+                        <button class="btn-open btn">[ 展開閱讀 ]</button>
+                    </div>
+
+                    <div class="off-state" style="display: none;">
+                        <p>
+                                <p>- 水電 &amp; 泥作：電線的舊管線埋於牆壁，若從舊有管線更改須將房子全打掉，工程浩大，故而將管線整個重做及外露，以工業風設計維持整體視覺。</p>
+                                <p>房屋原有的化糞池位在屋子後方廁所的正下方，考量使用人數與化糞池大小，修建時將其打掉再重埋新的於旁邊空地。</p>
+                                <p>改造過程Kevin亦親自投入整修，整棟皆由他自己進行完整的防水工程，以及部分的牆壁油漆，並透過觀摩學習怎麼貼磁磚，種種的施工參與經驗也讓他在緣憩的改造上更駕輕就熟，甚至自己來節省不少開支。</p>
+                            <br>
+                        </p>
+                        <button class="btn-close btn" style="display: none;">[ 收起閱讀 ] </button>
+                    </div>
+    `;
+            } else if (elem.id == "secondpart") {
+                document.getElementById("demo1").innerHTML =
+                    `
+    <div class="on-state">
+            <h2>創業背景</h2>
+            <img src='drawing/timeline.png' style="width: 100%">
+<p><span style="color: #808080;"><strong>| 生命有限，有起有落</strong></span></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;經營福憩之前，老闆Kevin在遠傳電信擔任主管職，需要隨時處理客人的問題而沒有時間休息，甚至度假也要帶著電腦待命，集團與大公司客戶給予的壓力常常令他感到低落與倦怠，不想過勞於這樣的生活，而有了創業做自己的念頭，商業周刊的某篇報導令他起心動念開背包客棧，這樣的想法和其他四位朋友不謀而合，談完三個月便四人合股開始動工。</p>
+<p>沒有資源的他們一年後幾近瓦解，只剩下Kevin與當時剛從南大外文畢業的Emily，之後Emily因為結婚的個人生涯規劃，將股份賣回給Kevin，Kevin持續堅持著福憩。</p>
+<p>&nbsp;</p>
+    <button class="btn-open btn">展開閱讀</button>
+    </div>
+    
+    
+    
+    <div class="off-state" style="display: none;">
+    
+            <h2>創業歷程</h2>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;想開背包客棧的Kevin，最後選址於中正路上的60 年老房子，考量青旅客群較為國際化，為了讓外國人更加了解台南文化，選擇以台南老房子展現台南的文化底蘊，作為台南第一間青年背包客棧，福憩十分有代表性，營收穩定成長，之後青旅風潮的興起確實帶來不少客源，但也引起房東的眼紅，持續的調漲房租。</p>
+<p>Kevin認為一直被漲房租也不是辦法，花了那麼多心血創造出福憩，又不想因此關掉旅店，決定應該擁有一棟自己的青旅，徒步走了兩三個月看房，徒步路過和平街，而有了和平館的誕生。</p>
+<p>近兩年受景氣與政策多方面影響，營收大幅下降，前年(2015)暑假旺季的住房率平日達八成、假日滿房，一個月將近500萬，整年淡旺季平均大致收入800萬，然而去年(2017)營收下滑6成，加上續約房租還要調高一萬元，實在難以負擔，而有了結束中正館的念頭。老闆透露，2018年上半年度租賃中正館2~4樓的租金將近7萬/月，一樓婚紗店店面租金約為5萬/月。</p>
+<p>2018年一月初Kevin便開始思索著是否要搬遷中正館，恰好有房東主動接洽，一拍即合，以一個月整棟七萬元的租金簽了五年合約，而有了九月熱鬧開幕的緣憩館，有趣的是，結束的中正館與新開幕的緣憩館僅間隔不到50公尺的距離。</p>
+<p>Kevin表示續約漲價後的中正館和搬遷過後的緣憩館兩者支出成本相近，但和舊房東之間沒有共同語言，沒有被同理創業的艱辛，反而不斷遭宰割，屋主為了節稅而不申請房屋使用執照，導致中正館陸續被開罰，長期以來的各種摩擦使得Kevin選擇另覓新處。</p>
+<p>&nbsp;</p>
+<h2>創業大難題：資金</h2>
+<p><span style="color: #808080;"><strong>| Kevin</strong><strong>無奈地說，有想法沒資金什麼都推不動。</strong></span></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;創業初期的資金是Kevin私下透過信用貸款20萬開始，老婆對於放棄大公司的安穩出來創業不表贊同，經營福憩的前四年Kevin採取兼職創業的方式，試圖在安穩與創業之間找到平衡，直到決定開設第二家和平館，才辭職全心投入。</p>
+<p>貸款以外，一開始Kevin也曾想過申請台南相關的老屋補助，但由於當時是兼職創業，實在無暇應付繁瑣的申請流程，其餘令許多人感到困擾的後續規範(ex.讓別人進來參觀)則不是他選擇不申請的考量。</p>
+<p>&nbsp;</p>
+<p><span style="color: #808080;"><strong>「人生努力很重要，觀念正確也很重要。」</strong></span></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;前期兼職創業，Kevin因為在大企業遠傳工作持有工作證明，容易進行個人借貸，後期全職當老闆反而不好借錢，企業貸款審核看重公司營收成長與獲利變化，亦須累積企業聲望建立信用，較不利於創業期間起起伏伏的福憩進行申請，高於抵押借貸的利率也在其精打細算的考量中。</p>
+<p>老闆提及，原本個人名義下擁有一棟自用的房子，但因為太太的公教人員身分貸款利率較低，轉入太太名下，購買和平館的時候，曾打算以這棟自用的房子進行抵押借貸，可以一次兩三百萬資金到位，並且貸以較低利率，降低整體風險，不過由於太太價值觀上的堅持，最後採取東借一點西借一點的個人信貸，來執行後續事宜，顯見兩人對於風險的不同偏好。</p>
+    <button class="btn-close btn" style="display: none;">收起閱讀</button>
+                        </div>`
+
+            } else if (elem.id == "thirdpart") {
+
+                document.getElementById("demo1").innerHTML =
+                    `
+    <div class="on-state">
+            <h2>經營策略</h2><br>
+<p><span style="color: #808080;"><strong>|&nbsp;</strong><strong>透過住房網、旅遊網等平台行銷，同時積極進修行銷相關課程</strong></span></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 福憩非常追求品質，並時常創新，所有創新發展策略完全是由Kevin一人思考出來並付諸實行，他說「現在市場太競爭，必須加強自己亮點與特色，時時刻刻有著生存意識，亦即競爭意識。」，像是booking訂房網這類行銷通路，他會為我們帶來客源，所以把品質顧好，客人來之後產生口碑，才能形成一種循環，「我自己也很常去參加行銷相關課程，出去才覺得世界很大，因為大公司老闆某些同業都會一起上課，在那裏能激盪出更多不一樣的創新想法。」Kevin說。</p>
+<p>因為長久的努力，福憩才能成為Trip Advisor 2015大獎得主並獲得卓越獎，並在Booking.com拿到8.6顆星。</p>
+<p><strong>&ldquo;現在進步已非硬體上了，反而更強調行銷策略定位特色，尤其這兩年市場不好特別競爭，對軟體也就是經營這部分感觸更深&rdquo;</strong></p>
+<button class="btn-open btn">展開閱讀</button>
+    </div>
+    
+    <div class="off-state" style="display: none;">
+            <p>&nbsp;</p>
+<p><span style="color: #808080;"><strong>|&nbsp;</strong><strong>藉由換位思考改善自己的不足</strong></span></p>
+<p>硬體服務方面，福憩會請他們自己人在福憩住一晚，或是去其他家背包客棧或民宿，把自己當作客人，並用旅客的角度去看有哪些地方能再作改善，別人有哪些地方實得我們借鏡學習的，或是也會問客人，並參考客人建議做改善，像背包客民宿的床位有插頭以及床邊的門簾就是我們發明的。</p>
+<p>&nbsp;</p>
+<p><span style="color: #808080;"><strong>|&nbsp;&rdquo;</strong><strong>緣憩</strong><strong>&rdquo; </strong><strong>強調手作文創，扶植另類創業</strong></span></p>
+<p>Kevin將中正新館「緣憩」定位為手作，有兩種原因:</p>
+<p><strong>老闆喜歡自己動手做</strong></p>
+<p>像是磁磚、防水都是Kevin自己弄，還有房間上下舖的樓梯也是Kevin用鋼筋做的，由他親自去鐵工廠拿材料回去，並自己電焊、磨再上漆，緣憩裡還有一間對滿各種材料與器具的小房間是Kevin的工作房。</p>
+<p><strong>藝術家的作品能對外展示</strong></p>
+<p>Kevin希望那間裡面充滿創作作品，希望展示作品同時可幫他賣，幫他賺到錢，希望民宿不只是住宿空間，也能幫助他創業，因為背包客很多都是有才華的，將來朝此方向雖然不一定會成功但不做一定不會成功。</p>
+<p>&nbsp;</p>
+<p><span style="color: #808080;"><strong>|&nbsp;</strong><strong>與同業組成愛嬉遊台灣青年旅館聯盟，導入會員制</strong></span></p>
+<p>Kevin說，通常會員忠誠度比較高，所以目前那個聯盟也創了一個會員制並且有個app，聯盟內的民宿都是合法的，起初入會有個折扣，住滿幾間就變成VIP，VIP全島又有另一個折扣，入會消費載送一條價值450元的毛巾，之後可能陸續會有一些周邊商品，主要是要綁住這些忠實會員。</p>
+<p>&nbsp;</p>
+<p><span style="color: #808080;"><strong>|&nbsp;</strong><strong>持續新增服務項目，讓旅客能有多樣或方便的體驗</strong></span></p>
+<p><strong>開發套裝行程</strong></p>
+<p>目前已經有規劃簡單的機加酒，就是機車加住宿，也想跟小琉球類似的套裝，但需要人力，我們沒人力，這兩年比較艱困，所以有想法有執行上困難，但我們會加強去克服，因為之前一直在服務大家，在民宿的協會處理事情，所以店都沒在顧，未來會檢討並在這些部分加強，跟周邊店家合作也是Kevin未來規劃之一。</p>
+<p><strong>將背包壯遊包裝成伴手禮</strong></p>
+<p>主題會類似青年壯遊， 把背包客住宿當伴手禮送給朋友，可能一晚或多晚，針對失業失去人生方向的朋友，用這個伴手禮讓他去環島幫助他，為他製造再造人生的希望。</p>
+<p>福憩希望用很平價的方式來表達，希望背包客真正了解到背包客旅店經營的核心，希望他們都能在這透過與人之間交流交到最真心的朋友，福憩則扮演平台角色，希望能幫助心情低潮者，像是救回想自殺的人的命，加上背包客品質不差，價錢也較平價所以很適合作伴手禮。</p>
+    <button class="btn-close btn" style="display: none;">收起閱讀</button>
+                        </div>`
+            }
+        }
+    </script>
+</body>
+
+</html>

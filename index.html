@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>老屋talk</title>
+
+    <style type="text/css">
+        #map {
+            width: 100%;
+            height: 800px;
+        }
+    </style>
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+    <!-- <link rel="stylesheet" href="snazzy-info-window.min.css"> -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="page1/assets/css/main.css">
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key={{YOUR KEY HERE}}"></script> -->
+    <script src="snazzy-info-window.min.js"></script>
+    <script type="text/javascript">
+        // When the window has finished loading create our google map below
+        google.maps.event.addDomListener(window, 'load', init);
+
+        function init() {
+
+            var mapOptions = {
+
+                zoom: 16,
+
+
+                center: new google.maps.LatLng(22.9975944, 120.1984000), // New York
+
+                styles: [{
+                    "featureType": "all",
+                    "elementType": "labels.text",
+                    "stylers": [{
+                        "visibility": "off"
+                    }]
+                }, {
+                    "featureType": "all",
+                    "elementType": "labels.text.fill",
+                    "stylers": [{
+                        "saturation": 36
+                    }, {
+                        "color": "#000000"
+                    }, {
+                        "lightness": 40
+                    }, {
+                        "visibility": "off"
+                    }]
+                }, {
+                    "featureType": "all",
+                    "elementType": "labels.text.stroke",
+                    "stylers": [{
+                        "visibility": "off"
+                    }, {
+                        "color": "#000000"
+                    }, {
+                        "lightness": 16
+                    }]
+                }, {
+                    "featureType": "all",
+                    "elementType": "labels.icon",
+                    "stylers": [{
+                        "visibility": "off"
+                    }]
+                }, {
+                    "featureType": "administrative",
+                    "elementType": "all",
+                    "stylers": [{
+                        "visibility": "off"
+                    }]
+                }, {
+                    "featureType": "administrative",
+                    "elementType": "geometry",
+                    "stylers": [{
+                        "color": "#e4524e"
+                    }, {
+                        "gamma": "1.09"
+                    }, {
+                        "lightness": "-39"
+                    }, {
+                        "saturation": "-19"
+                    }]
+                }, {
+                    "featureType": "administrative",
+                    "elementType": "geometry.fill",
+                    "stylers": [{
+                        "color": "#000000"
+                    }, {
+                        "lightness": 20
+                    }]
+                }, {
+                    "featureType": "administrative",
+                    "elementType": "geometry.stroke",
+                    "stylers": [{
+                        "color": "#000000"
+                    }, {
+                        "lightness": 17
+                    }, {
+                        "weight": 1.2
+                    }]
+                }, {
+                    "featureType": "administrative",
+                    "elementType": "labels",
+                    "stylers": [{
+                        "visibility": "on"
+                    }, {
+                        "invert_lightness": true
+                    }]
+                }, {
+                    "featureType": "landscape",
+                    "elementType": "geometry",
+                    "stylers": [{
+                        "color": "#9e5250"
+                    }]
+                }, {
+                    "featureType": "landscape.man_made",
+                    "elementType": "geometry",
+                    "stylers": [{
+                        "color": "#e9a6a4"
+                    }, {
+                        "lightness": "21"
+                    }, {
+                        "gamma": "3.78"
+                    }]
+                }, {
+                    "featureType": "landscape.natural",
+                    "elementType": "geometry",
+                    "stylers": [{
+                        "color": "#e4c5c5"
+                    }, {
+                        "lightness": "39"
+                    }]
+                }, {
+                    "featureType": "landscape.natural.landcover",
+                    "elementType": "geometry",
+                    "stylers": [{
+                        "color": "#ffbbb7"
+                    }, {
+                        "lightness": "21"
+                    }]
+                }, {
+                    "featureType": "landscape.natural.terrain",
+                    "elementType": "geometry",
+                    "stylers": [{
+                        "visibility": "on"
+                    }, {
+                        "color": "#e5946b"
+                    }, {
+                        "lightness": "21"
+                    }]
+                }, {
+                    "featureType": "poi",
+                    "elementType": "geometry",
+                    "stylers": [{
+                        "color": "#ffd2d1"
+                    }, {
+                        "lightness": 21
+                    }]
+                }, {
+                    "featureType": "road",
+                    "elementType": "geometry.fill",
+                    "stylers": [{
+                        "color": "#ffffff"
+                    }, {
+                        "visibility": "on"
+                    }]
+                }, {
+                    "featureType": "road",
+                    "elementType": "geometry.stroke",
+                    "stylers": [{
+                        "visibility": "off"
+                    }]
+                }, {
+                    "featureType": "road",
+                    "elementType": "labels",
+                    "stylers": [{
+                        "visibility": "simplified"
+                    }, {
+                        "invert_lightness": true
+                    }]
+                }, {
+                    "featureType": "road",
+                    "elementType": "labels.text",
+                    "stylers": [{
+                        "visibility": "on"
+                    }]
+                }, {
+                    "featureType": "road.highway",
+                    "elementType": "geometry.fill",
+                    "stylers": [{
+                        "color": "#ffffff"
+                    }, {
+                        "lightness": 17
+                    }, {
+                        "visibility": "on"
+                    }]
+                }, {
+                    "featureType": "road.highway",
+                    "elementType": "geometry.stroke",
+                    "stylers": [{
+                        "color": "#000000"
+                    }, {
+                        "lightness": 29
+                    }, {
+                        "weight": 0.2
+                    }]
+                }, {
+                    "featureType": "road.highway",
+                    "elementType": "labels",
+                    "stylers": [{
+                        "visibility": "off"
+                    }]
+                }, {
+                    "featureType": "road.arterial",
+                    "elementType": "geometry",
+                    "stylers": [{
+                        "color": "#000000"
+                    }, {
+                        "lightness": 18
+                    }]
+                }, {
+                    "featureType": "road.arterial",
+                    "elementType": "geometry.fill",
+                    "stylers": [{
+                        "color": "#ffffff"
+                    }]
+                }, {
+                    "featureType": "road.arterial",
+                    "elementType": "labels",
+                    "stylers": [{
+                        "visibility": "simplified"
+                    }]
+                }, {
+                    "featureType": "road.local",
+                    "elementType": "geometry",
+                    "stylers": [{
+                        "color": "#000000"
+                    }, {
+                        "lightness": 16
+                    }]
+                }, {
+                    "featureType": "road.local",
+                    "elementType": "geometry.fill",
+                    "stylers": [{
+                        "color": "#fffcfc"
+                    }]
+                }, {
+                    "featureType": "road.local",
+                    "elementType": "labels.text",
+                    "stylers": [{
+                        "visibility": "simplified"
+                    }]
+                }, {
+                    "featureType": "transit",
+                    "elementType": "geometry",
+                    "stylers": [{
+                        "color": "#000000"
+                    }, {
+                        "lightness": 19
+                    }, {
+                        "visibility": "off"
+                    }]
+                }, {
+                    "featureType": "transit.line",
+                    "elementType": "labels",
+                    "stylers": [{
+                        "visibility": "off"
+                    }]
+                }, {
+                    "featureType": "water",
+                    "elementType": "geometry",
+                    "stylers": [{
+                        "weight": "4.96"
+                    }]
+                }]
+            };
+
+            // Get the HTML DOM element that will contain your map 
+            // We are using a div with id="map" seen below in the <body>
+            var mapElement = document.getElementById('map');
+
+            // Create the Google Map using our element and options defined above
+            var map = new google.maps.Map(mapElement, mapOptions);
+
+            // Let's also add a marker while we're at it
+            var data = [{
+                    position: {
+                        lat: 22.9945282,
+                        lng: 120.2029702
+                    },
+                    icon: 'Final/bbart.svg',
+                    map: map,
+                    title: '點擊進入文章'
+                }, {
+                    position: {
+                        lat: 22.9905199,
+                        lng: 120.2012536
+                    },
+                    icon: 'Final/兜.svg',
+                    map: map,
+                    title: '點擊進入文章'
+                }, {
+                    position: {
+                        lat: 22.9995947,
+                        lng: 120.1940051
+                    },
+                    icon: 'Final/moo.svg',
+                    map: map,
+                    title: '點擊進入文章'
+                }, {
+                    position: {
+                        lat: 22.9996192,
+                        lng: 120.187439
+                    },
+                    icon: 'Final/fuki.svg',
+                    map: map,
+                    title: '點擊進入文章'
+                }, {
+                    position: {
+                        lat: 22.9920197,
+                        lng: 120.2028282
+                    },
+                    icon: 'Final/pundi.svg',
+                    map: map,
+                    title: '點擊進入文章'
+                }, {
+                    position: {
+                        lat: 22.9939317,
+                        lng: 120.1974063
+                    },
+                    icon: 'Final/absolute.svg',
+                    map: map,
+                    title: '點擊進入文章'
+                }
+
+            ];
+
+
+
+            // B.BArt >22.9945282,120.2029702 
+            // 兜府>22.9905199,120.2012536,
+            // 慕紅豆
+            // >22.9995947,120.1940051
+            // 福憩背包客棧>22.9996192,120.187439
+            // 胖地/@22.9920246,120.2028336
+            // 絕對空間/@22.9939317,120.1974063
+
+
+            // for (var i = 0; data.length > i; i++) {
+            //     marker = new google.maps.Marker(data[i]);
+            // }
+
+            // var infoWindow = new SnazzyInfoWindow({
+            //     marker: marker,
+            //     content: 'Snazzy!'
+            // });
+
+            //             var a = -1;
+            //             var infowindow = new google.maps.InfoWindow({
+            //                 content: ` <div class="card-container">
+            //         <div class="row card_info">
+            //             <h4 class="layer2 ">慕紅豆</h4>
+            //             <HR class="cen" style="FILTER: alpha(opacity=100,finishopacity=0,style=3);margin-bottom: 10px" width="80%" color=#88112D SIZE=30>
+            //             <div class="col-5 cen" style="color:black">
+            //                 <ul>
+            //                     <li><span>屋齡</span></li>
+            //                     <li><span>建築類型</span></li>
+            //                     <li><span>經營者 </span></li>
+            //                     <li><span>經營類型</span></li>
+            //                     <li><span>創立時間</span></li>
+            //                 </ul>
+            //             </div>
+            //             <div class="col-7 cen" id="card-info" style="color:black">
+            //                 <ul>
+            //                     <li><span>100年以上(日治時期)</span></li>
+            //                     <li><span>連棟街屋</span></li>
+            //                     <li><span>唐文正(大可)</span></li>
+            //                     <li><span>甜點</span></li>
+            //                     <li><span>2011</span></li>
+            //                 </ul>
+            //             </div>
+            //         </div>
+            //     </div>
+            // `
+            //             });
+
+
+            // for (var i = 0; data.length > i; i++) {
+            //     marker.addListener('mouseover', function() {
+            //         a = a * -1;
+            //         if (a > 0) {
+            //             infowindow.open(map, marker);
+            //         } else {
+            //             infowindow.close();
+            //         }
+            //     });
+            //     google.maps.event.addListener(infowindow, 'mouseout', function() {
+            //         a = a * -1;
+            //     });
+            // }
+
+            // $("body").delegate(".gm-style-iw")
+
+
+            for (var i = 0; i < 6; i++) {
+                // var location = new google.maps.LatLng(southWest.lat() + latSpan * Math.random(),
+                //     southWest.lng() + lngSpan * Math.random());
+                // var marker = new google.maps.Marker({
+                //     position: location,
+                //     map: map
+                // });
+                var marker = new google.maps.Marker(data[i]);
+
+                // var j = i + 1;
+                // marker.setTitle(j.toString());
+                attachSecretMessage(marker, i); //所以这里传值就不用传map值了
+            }
+
+
+
+            function attachSecretMessage(marker, number) {
+                //'B.B.ART',dou,moo,fuki,pundi,absolute
+                // var icons = ["Final/absolute.svg", "Final/absolute.svg", "Final/absolute.svg", "Final/absolute.svg", "Final/absolute.svg", "Final/absolute.svg"]
+
+                var message = [` <div class="card-container">
+                    <div class="row card_info">
+                        <h3 class="layer2 ">B.B.ART</h3>
+                        <HR class="cen" style="FILTER: alpha(opacity=100,finishopacity=0,style=3);margin-bottom: 10px" width="90%" color=#88112D SIZE=30>
+                        <div class="col-5 cen" style="color:black">
+                            <ul>
+                                <li><span>屋齡</span></li>
+                                <li><span>建築類型</span></li>
+                                <li><span>經營者 </span></li>
+                                <li><span>經營類型</span></li>
+                                <li><span>創立時間</span></li>
+                            </ul>
+                        </div>
+                        <div class="col-7 cen" id="card-info" style="color:black">
+                            <ul>
+                                <li><span>約90年</span></li>
+                                <li><span>獨棟商業空間</span></li>
+                                <li><span>杜昭賢</span></li>
+                                <li><span>藝術展演空間、咖啡廳</span></li>
+                                <li><span>2012</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            `, `<div class="card-container">
+                    <div class="row card_info">
+                        <h3 class="layer2 ">兜府</h3>
+                        <HR class="cen" style="FILTER: alpha(opacity=100,finishopacity=0,style=3);margin-bottom: 10px" width="90%" color=#88112D SIZE=30>
+                        <div class="col-5 cen" style="color:black">
+                            <ul>
+                                <li><span>屋齡</span></li>
+                                <li><span>建築類型</span></li>
+                                <li><span>經營者 </span></li>
+                                <li><span>經營類型</span></li>
+                                <li><span>創立時間</span></li>
+                            </ul>
+                        </div>
+                        <div class="col-7 cen" id="card-info" style="color:black">
+                            <ul>
+                    <li><span>約60年</span></li>
+                    <li><span>連棟透天</span></li>
+                    <li><span>黃若珣</span></li>
+                    <li><span>民宿</span></li>
+                    <li><span>2014</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>`, ` <div class="card-container">
+                    <div class="row card_info">
+                        <h3 class="layer2 ">慕紅豆</h3>
+                        <HR class="cen" style="FILTER: alpha(opacity=100,finishopacity=0,style=3);margin-bottom: 10px" width="90%" color=#88112D SIZE=30>
+                        <div class="col-5 cen" style="color:black">
+                            <ul>
+                                <li><span>屋齡</span></li>
+                                <li><span>建築類型</span></li>
+                                <li><span>經營者 </span></li>
+                                <li><span>經營類型</span></li>
+                                <li><span>創立時間</span></li>
+                            </ul>
+                        </div>
+                        <div class="col-7 cen" id="card-info" style="color:black">
+                            <ul>
+                                <li><span>100年以上(日治時期)</span></li>
+                                <li><span>連棟街屋</span></li>
+                                <li><span>唐文正(大可)</span></li>
+                                <li><span>甜點</span></li>
+                                <li><span>2011</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            `, `<div class="card-container">
+                    <div class="row card_info">
+                        <h3 class="layer2 ">福憩背包客棧</h3>
+                        <HR class="cen" style="FILTER: alpha(opacity=100,finishopacity=0,style=3);margin-bottom: 10px" width="90%" color=#88112D SIZE=30>
+                        <div class="col-5 cen" style="color:black">
+                            <ul>
+                                <li><span>屋齡</span></li>
+                                <li><span>建築類型</span></li>
+                                <li><span>經營者 </span></li>
+                                <li><span>經營類型</span></li>
+                                <li><span>創立時間</span></li>
+                            </ul>
+                        </div>
+                        <div class="col-7 cen" id="card-info" style="color:black">
+                            <ul>
+                    <li><span>60年</span></li>
+                    <li><span>連棟透天</span></li>
+                    <li><span>柯凱文</span></li>
+                    <li><span>民宿(背包客棧)</span></li>
+                    <li><span>2010</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>`, `<div class="card-container">
+                    <div class="row card_info">
+                        <h3 class="layer2 ">胖地</h3>
+                        <HR class="cen" style="FILTER: alpha(opacity=100,finishopacity=0,style=3);margin-bottom: 10px" width="90%" color=#88112D SIZE=30>
+                        <div class="col-5 cen" style="color:black">
+                            <ul>
+                                <li><span>屋齡</span></li>
+                                <li><span>建築類型</span></li>
+                                <li><span>經營者 </span></li>
+                                <li><span>經營類型</span></li>
+                                <li><span>創立時間</span></li>
+                            </ul>
+                        </div>
+                        <div class="col-7 cen" id="card-info" style="color:black">
+                            <ul>
+                    <li><span>約50年</span></li>
+                    <li><span>連棟透天</span></li>
+                    <li><span>賴俊傑(Jay)</span></li>
+                    <li><span>共創空間</span></li>
+                    <li><span>2011</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>`, `<div class="card-container">
+                    <div class="row card_info">
+                        <h3 class="layer2">絕對空間</h3>
+                        <HR class="cen" style="FILTER: alpha(opacity=100,finishopacity=0,style=3);margin-bottom: 10px" width="90%" color=#88112D SIZE=30>
+                        <div class="col-5 cen" style="color:black">
+                            <ul>
+                                <li><span>屋齡</span></li>
+                                <li><span>建築類型</span></li>
+                                <li><span>經營者 </span></li>
+                                <li><span>經營類型</span></li>
+                                <li><span>創立時間</span></li>
+                            </ul>
+                        </div>
+                        <div class="col-7 cen" id="card-info" style="color:black">
+                            <ul>
+                    <li><span>約60年</span></li>
+                    <li><span>連棟透天</span></li>
+                    <li><span>黃逸民</span></li>
+                    <li><span>藝廊替代空間、民宿</span></li>
+                    <li><span>2013</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>`];
+
+
+
+
+                var page = ['page1/moo/grid-system.html', 'page1/moo/grid-system.html', 'page1/moo/grid-system.html', 'page1/fuki/grid-system.html', 'page1/moo/grid-system.html', 'page1/moo/grid-system.html'];
+
+
+                var infowindow = new google.maps.InfoWindow({
+                    content: message[number],
+                    size: new google.maps.Size(50, 50)
+                });
+
+                google.maps.event.addListener(marker, 'mouseover', function() {
+                    infowindow.open(map, marker);
+                });
+
+                google.maps.event.addListener(marker, 'click', function() {
+                    infowindow.open(map, marker);
+                    window.location = page[number];
+                });
+
+                google.maps.event.addListener(marker, 'mouseover', function() {
+                    infowindow.open(map, marker);
+                });
+            }
+
+
+            //            function attachSecretMessage(marker, number) {
+            //     var message = ["This", "is", "the", "secret", "message", "0"];
+
+
+            //     var infowindow = new google.maps.InfoWindow({
+            //         content: message[number],
+            //         size: new google.maps.Size(50, 50)
+            //     });
+
+            // google.maps.event.addListener(marker, 'mouseover', function() {
+            //     infowindow.open(map, marker);
+            // });
+            // }
+
+        }
+    </script>
+</head>
+
+<body>
+    <nav class="Rectangle-311">
+        <div class="container flex-between ">
+            <div class="logo">
+                <a href="./index.html">
+                    <img src="page1/assets/media/logo.png" alt="logo" class="logo">
+
+
+                </a>
+            </div>
+
+            <ul class="flex-between " id="topMenu">
+                <li><a href="page1/blog.html">Blog</a></li>
+                <li><a href="page2/talk.html">Let's Talk</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="ham" onclick="toggleMenu()">☰</button>
+        </div>
+    </nav>
+    <header>
+
+        <!-- <h1>Snazzy Maps Super Simple Example</h1> -->
+        <div class="slider_container">
+            <h1 class="hptitle"> <img src="page1/assets/media/logo.png" alt="title" style="width:30rem"></h1>
+            <!-- 老屋Talk< -->
+
+            <!-- <div class="hp_intro">
+                <h3><strong>「如何激發老屋保存的意識與價值?」</strong></h3>
+                <div>老屋是台南重要的文化元素，我們相信唯有積極的行動能促進老屋保存的討論。</div>
+                <div>因此，我們將年輕熱血的老屋創業者視為新世代的重要能量，</div>
+                <div>透過實地採訪老屋改造的成功案例、以及各類創業資訊的整合，</div>
+                <div>打造媒合老屋創業者與在地文化的平台，</div>
+                <div><strong>希望透過新能量的注入，活化舊時代的老屋靈魂。</strong></div>
+            </div> -->
+            <div class="subtitle">
+                <!-- 「如何激發老屋保存的意識與價值?」<br/> 老屋是台南重要的文化元素，我們相信唯有積極的行動能促進老屋保存的討論。
+                <br/> 因此，我們將年輕熱血的老屋創業者視為新世代的重要能量， -->
+                <p>「如何激發老屋保存的意識與價值?」
+                    <br/> 透過實地採訪老屋改造的成功案例、以及各類創業資訊的整合，
+                    <br/> 「老屋talk」打造媒合老屋創業者與在地文化的平台，
+                    <br/> 希望透過新能量的注入，活化舊時代的老屋靈魂。</p>
+            </div>
+
+            <div class="slide-img">
+                <img src="page1/assets/media/A/homepage_01.png" />
+            </div>
+            <div class="slide-img">
+                <img src="page1/assets/media/A/homepage_02.png" />
+            </div>
+            <div class="slide-img">
+                <img src="page1/assets/media/A/homepage_03.png" />
+            </div>
+            <div class="slide-img">
+                <img src="page1/assets/media/A/homepage_04.png" />
+            </div>
+            <div class="slide-img">
+                <img src="page1/assets/media/A/homepage_05.png" />
+            </div>
+            <div class="slide-img">
+                <img src="page1/assets/media/A/homepage_06.png" />
+            </div>
+            <div class="slide-img">
+                <img src="page1/assets/media/A/homepage_07.png" />
+            </div>
+            <div class="slide-img">
+                <img src="page1/assets/media/A/homepage_08.png" />
+            </div>
+            <div class="slide-img">
+                <img src="page1/assets/media/A/homepage_09.png" />
+            </div>
+            <div class="slide-img">
+                <img src="page1/assets/media/A/homepage_10.png" />
+            </div>
+
+
+            <!-- <div>
+                <img src="page1/assets/media/A/homepage_01.svg" width="800" height="500" />
+            </div>
+            <div>
+                <img src="img/003.jpg" width="800" height="500" />
+            </div> -->
+        </div>
+    </header>
+
+    <section>
+
+        <!-- <h2><a href="https://snazzymaps.com/style/8097/wy" target="_blank">WY</a></h2> -->
+
+        <!-- The element that will contain our Google Map. This is used in both the Javascript and CSS above. -->
+        <div class="container3" id="map"></div>
+    </section>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="si-wrapper-top custom-window open active " style="margin-top: -72px; ">
+        <div class="si-shadow-wrapper-top ">
+            <div class="si-frame si-shadow-frame "></div>
+            <div class="si-shadow-pointer-top ">
+                <div class="si-shadow-inner-pointer-top "></div>
+            </div>
+        </div>
+        
+        <div class="si-frame si-content-wrapper "><button type="button " class="custom-close ">×</button>
+            <div class="si-content " style="max-width: 559px; max-height: 506px; ">
+                <div class="custom-img " style="background-image: url(https://images.unsplash.com/42/U7Fc1sy5SCUDIu4tlJY3_NY_by_PhilippHenzler_philmotion.de.jpg?dpr=1&amp;auto=format&amp;fit=crop&amp;w=800&amp;h=350&amp;q=80&amp;cs=tinysrgb&amp;crop=) "></div>
+                <section class="custom-content ">
+                    <h1 class="custom-header ">
+                        Complex Styles
+                        <small>For Snazzy Info Windows</small>
+                    </h1>
+                    <div class="custom-body ">
+                        <p><em>Photo by <a href="https://unsplash.com/@philipphenzler " target="_blank ">Philipp Henzler</a>.</em></p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce imperdiet elit et nibh tincidunt elementum eget quis orci.</p>
+                        <p>Ut magna est, lobortis ut mollis eu, vulputate id turpis.</p>
+                        <p>Pellentesque id lacus quis orci consequat pellentesque non non purus. Mauris ligula dolor, volutpat quis blandit at, luctus luctus quam. In hac habitasse platea dictumst.</p>
+                        <p>In hac habitasse platea dictumst. In hac habitasse platea dictumst.</p>
+                        <p>Nam lorem dui, molestie nec elementum nec, lobortis sed lacus. Morbi nec tellus dolor. Etiam nec volutpat urna, pretium consectetur augue. In mattis, leo a ullamcorper venenatis, augue tortor cursus quam, nec mollis neque urna
+                            vitae lacus.</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="si-pointer-top si-pointer-bg-top "></div>
+    </div> -->
+
+<!-- 
+            You need to include this script tag on any page that has a Google Map.
+
+            The following script tag will work when opening this example locally on your computer.
+            But if you use this on a localhost server or a live website you will need to include an API key. 
+            Sign up for one here (it's free for small usage): 
+                https://developers.google.com/maps/documentation/javascript/tutorial#api_key
+
+            After you sign up, use the following script tag with YOUR_GOOGLE_API_KEY replaced with your actual key.
+                <script type="text/javascript " src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_API_KEY "></script>
+        -->

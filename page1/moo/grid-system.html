@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>老屋talk-慕紅豆</title>
+    <style>
+        * {
+            border: 0px solid black;
+        }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="article.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/main_front.css">
+
+
+</head>
+
+<body>
+
+    <!--導覽列-->
+    <nav class="Rectangle-311">
+        <div class="container flex-between ">
+            <div class="logo">
+                <a href="../../index.html">
+                    <img src="assets/media/logo.png" alt="logo" class="logo">
+                </a>
+            </div>
+
+
+            <ul class="flex-between " id="topMenu">
+                <li class="active"><a href="../blog.html">Blog</a></li>
+                <li><a href="#discuss">Let's Talk</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="ham" onclick="toggleMenu()">☰</button>
+        </div>
+    </nav>
+    <!--導覽列-->
+
+    <div class="cen">
+        <div class="container m-5">
+            <div class="row">
+                <div class="col-8">
+                    <P Align=center>
+                        <img src='drawing/mo.svg' width="500"> </P>
+                    <div class="tx-cen">
+
+                        <span>
+                        「愛慕」、「思慕」，紅豆又名相思豆。
+                        <br> 「Move」，意味著移動與改變現況，呼應大可的漂流計畫。
+                        <br> 「木」，象徵取之於大自然及對木作的喜愛，柴燒以及食材使用的堅持。
+                    </span>
+
+
+                    </div>
+
+
+                </div>
+                <div class="col-4">
+                    <h1>慕紅豆</h1>
+                    <br>
+                    <br>
+                    <br>
+                    <span>
+                    <div class="row">
+                        <div class="col-6">
+                            屋齡
+                            <br> 建築類型
+                            <br> 經營者
+                            <br> 經營類型
+                            <br> 創立時間
+                        </div>
+                        <div class="col-6">
+                            100年以上(日治時期)
+                            <br> 連棟街屋
+                            <br> 唐文正(大可)
+                            <br> 甜點
+                            <br> 2011
+                        </div>
+                    </div>
+                </span>
+                    <span>
+                    <br>
+                    <a href="https://www.facebook.com/moveredbean/">
+                        <img src='link/fb.png' width="40">
+                        <u>慕ㄇㄨˋ紅豆</u>
+                        <br>
+                    </a>
+                </span>
+                    <span>
+                    <img src="https://png.icons8.com/doodle/96/000000/marker.png" width="40"> 台南市中西區民族路三段148巷35號
+                </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="container m-5">
+        <div class="row">
+            <div class="col-4">
+                <ul>
+                    <button id="firstpart" onclick="displaytext(this)">改造過程</button>
+                    <button id="secondpart" onclick="displaytext(this)">經營歷程</button>
+                    <!-- <li>
+                        <a href="test.html">改造過程</a>
+                    </li> -->
+                </ul>
+            </div>
+
+
+            <div class="col-8">
+                <span id="demo1">
+                    <div class="on-state">
+                        <h3>重視環保、疼惜老物</h3>
+                        <br> “Two roads diverged in a wood, and I took the one less traveled by,And that has made all the difference.”─
+                        Robert Frost, The Road Not Taken.
+                        <br>「選擇一條人煙稀少的路」， 是大可某一次舉辦經驗分享講座的主題，選擇一條人煙稀少的路，從此人生大不同。 慕紅豆的創業歷程正是這樣的一個例子"
+                        <br>
+
+                        <button class="btn-open btn" >展開閱讀</button>
+                    </div>
+                    
+                    <div class="off-state" style="display: none;">
+                        <h3>重視環保、疼惜老物123</h3>
+                        <br> “Two roads diverged in a wood, and I took the one less traveled by,And that has made all the difference.”─
+                        Robert Frost, The Road Not Taken.
+                        <br>「選擇一條人煙稀少的路」， 是大可某一次舉辦經驗分享講座的主題，選擇一條人煙稀少的路，從此人生大不同。 慕紅豆的創業歷程正是這樣的一個例子"
+                        <br>
+                        <button class="btn-close btn" style="display: none;">收起閱讀</button>
+                        </div>
+                        <!-- <span class="off-element">收起閱讀</span> -->
+            </div>
+
+            <script src='https://code.jquery.com/jquery-2.1.4.min.js'></script>
+
+
+
+
+            <script>
+                // $("[data-js=expand-story]").on('click', function () {
+                //     var $this = $(this);
+                //     var $target = $($this.data('expand'));
+                //     var $last_pos = $target.offset().top - 250;
+                //     $target.slideToggle({
+                //         done: function () {
+                //             console.log($target.css('display'));
+                //             if ($target.css('display') === 'none') {
+                //                 console.log('scroll back');
+                //                 console.log($last_pos);
+                //                 $('body,html').animate({
+                //                     scrollTop: $last_pos
+                //                 });
+                //             }
+                //         }
+                //     });
+                //     return false;
+
+                // });
+
+
+                // $('.on-off-states').on('click', function () {
+                //     $(this).toggleClass('on-state');
+                //     $(this).toggleClass('off-state');
+                //     return false;
+                // });
+
+                $("body").delegate("button.btn-open", "click", function() {
+                    // $($("button.open").click(function () {
+                    console.log("123")
+                    $(".btn-open").toggle();
+                    $(".btn-close").toggle();
+                    $(".off-state").toggle();
+
+                });
+                $("body").delegate("button.btn-close", "click", function() {
+
+                    // $("button.btn-close").click(function () {
+                    console.log("123")
+                    $(".btn-open").toggle();
+                    $(".btn-close").toggle();
+                    $(".off-state").toggle();
+                });
+
+                function displaytext(elem) {
+                    if (elem.id == "firstpart") {
+                        document.getElementById("demo1").innerHTML =
+                            `
+                                <div class="on-state">
+                        <h3>重視環保、疼惜老物</h3>
+                        <br> “Two roads diverged in a wood, and I took the one less traveled by,And that has made all the difference.”─
+                        Robert Frost, The Road Not Taken.
+                        <br>「選擇一條人煙稀少的路」， 是大可某一次舉辦經驗分享講座的主題，選擇一條人煙稀少的路，從此人生大不同。 慕紅豆的創業歷程正是這樣的一個例子"
+                        <br>
+                        
+                        <button class="btn-open btn">展開閱讀</button>
+                    </div>
+                    <div class="off-state" style="display: none;">
+                        <h3>重視環保、疼惜老物123</h3>
+                        <br> “Two roads diverged in a wood, and I took the one less traveled by,And that has made all the difference.”─
+                        Robert Frost, The Road Not Taken.
+                        <br>「選擇一條人煙稀少的路」， 是大可某一次舉辦經驗分享講座的主題，選擇一條人煙稀少的路，從此人生大不同。 慕紅豆的創業歷程正是這樣的一個例子"
+                        <br>
+                        <button class="btn-close btn" style="display: none;">收起閱讀</button>
+                        <!-- <span class="off-element">收起閱讀</span> -->
+                    </div>
+`
+
+
+
+
+                        ;
+
+                    } else if (elem.id == "secondpart") {
+                        document.getElementById("demo1").innerHTML =
+
+                            `
+<div class="on-state">
+    <p>
+    <a><strong>創業背景</strong></a>
+    <strong>
+        <br/>
+    </strong>
+    <strong>大可的大哉問 </strong>
+    <strong>──「怎麼領快樂的薪水？」</strong>
+</p>
+<p>
+    訪談一開始詢問慕紅豆的緣起，大可便拋出這個難倒眾人的問題，然後緩緩敘述著自己的工作經歷與每一段的承轉。
+</p>
+<p>
+    十多年前剛出社會的大可，他的理想職業是近年興起的城市導覽員，雖然參與了培訓，但在向神明尋求指引後，他進到了旅行社工作，踏入職場的現實，導覽員的志工性質實在無法讓他維持生活，「虎落平陽被犬欺」的籤詩彷彿印證了心中的顧忌。
+</p>
+<p>
+    開賣慕紅豆之前，擔任電腦業務的大可跑遍台南各級學校、縣市政府機關和公司機構，和許多人交朋友、認識不少客戶，聊天時刻往往雙方盡興，不過提到工作牽扯職責的時候，便是職場的難處了，出來工作就無法純粹交朋友，必然有業績壓力，即使做了很多調整依舊覺得不適合，縱使換公司、換工作依然沒辦法只領快樂的薪水…...
+</p>
+<button class="btn-open btn">展開閱讀</button>
+</div>
+
+
+
+<div class="off-state" style="display: none;">
+
+<div>
+    <br/>
+</div>
+<div>
+    <p>
+        <a><strong>「對於你的生活有所抱怨、有所不滿的，那個就是起點了。」</strong></a>
+        <strong></strong>
+    </p>
+    <p>
+        每個人對於工作、生活都有自己的想像與取捨，多數人在穩定工作、穩定薪水和幹譙老闆之間取得平衡，這是一種生活型態，大可則更傾向選擇快樂的好生活，並朝著這麼方向進行改變，他說，試來試去，有一天那一股要做很重大改變的力量就會蓄積而成，形成徹底的死心、做出破釜沉舟的決定，所以決定不要進職場工作。
+    </p>
+    <p>
+        自己創業開店、權衡經濟收入、自己決定錢賺少少沒有抱怨，這是大可所選擇的路，當然，他的意思不是將創業當成就業不順的退路，也不覺得每個人都適合創業工作，而是想表達良性循環的生活態度，在於有多少意願。
+    </p>
+    <p>
+        <strong>「柴燒是阮細漢的記智，紅豆湯是幸福的堅持，過生活是一世人的代誌」</strong>
+        <strong></strong>
+    </p>
+    <p>
+        說到柴燒紅豆湯就觸發了好多相關的回憶與故事，大可訥訥的說不認為柴燒比較好喝，而是喜歡玩火、喜歡木頭，為了讓玩火這件事情合理一點才使用柴燒，然後分享小可在兒時看電視時，趁著廣告去起火添柴煮洗澡水的逗趣。
+    </p>
+    <p>
+        媽媽用灶煮粽子的身影、爸爸當志工分煮紅豆湯的笑容，以及職場中輟進行禪修時住持端來的那碗紅豆湯，眾多記憶軌跡的交會，賣紅豆湯分享溫暖的構想就誕生了！
+    </p>
+</div>
+<div>
+    <br/>
+</div>
+<button class="btn-close btn" style="display: none;">收起閱讀</button>
+                    </div>
+
+
+
+
+
+
+
+`
+
+
+
+                    }
+                    // else if ((elem.id != "secondpart")||(elem.id !="firstpart")){
+                    //     document.getElementById("demo1").innerHTML=" ooo>>>>>>>oo"
+                    // }
+                }
+            </script>
+            <!-- <p id="demo1"></p> -->
+            <!-- <iframe src="test.html"  width="700" height="200" scrolling="no"></iframe> -->
+        </div>
+    </div>
+    </span>
+    </div>
+
+    <div class="container m-5">
+        <div class="row">
+            <div class="col-12">
+                <!-- Gallery -->
+                <section id="galleries">
+
+                    <!-- Photo Galleries -->
+                    <div class="gallery">
+
+                        </header>
+                        <div class="content">
+                            <div class="media">
+                                <a href="images/fulls/01.jpg"><img src="images/fulls/01.jpg" alt="" title="一樓交誼空間" /></a>
+                            </div>
+                            <div class="media">
+                                <a href="images/fulls/02.jpg"><img src="images/fulls/02.jpg" alt="" title="樓梯間可見工匠房細緻的八角窗" /></a>
+                            </div>
+                            <div class="media">
+                                <a href="images/fulls/03.jpg"><img src="images/fulls/03.jpg" alt="" title="工匠房美麗的八角窗" /></a>
+                            </div>
+                            <div class="media">
+                                <a href="images/fulls/04.jpg"><img src="images/fulls/04.jpg" alt="" title="磁磚先前有塑膠地磚的保護，拆除後得以重建天日" /></a>
+                            </div>
+                            <div class="media">
+                                <a href="images/fulls/05.jpg"><img src="images/fulls/05.jpg" alt="" title="舊式馬賽克浴缸" /></a>
+                            </div>
+                            <div class="media">
+                                <a href="images/fulls/06.jpg"><img src="images/fulls/06.jpg" alt="" title="舊時門牌，在中區更名為中西區後被保存下來" /></a>
+                            </div>
+                            <div class="media">
+                                <a href="images/fulls/07.jpg"><img src="images/fulls/07.jpg" alt="" title="戶外假山水露臺_美麗的鐵花窗" /></a>
+                            </div>
+                            <div class="media">
+                                <a href="images/fulls/08.jpg"><img src="images/fulls/08.jpg" alt="" title="家庭房 : 不同窗戶形成的半透明牆體，兼具採光與隔間功能" /></a>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+
+
+                <!-- Scripts -->
+                <script src="assets/js/jquery.min.js"></script>
+                <script src="assets/js/jquery.poptrox.min.js"></script>
+                <script src="assets/js/jquery.scrolly.min.js"></script>
+                <script src="assets/js/skel.min.js"></script>
+                <script src="assets/js/util.js"></script>
+                <script src="assets/js/main.js"></script>
+
+            </div>
+        </div>
+    </div>
+    <!-- <div class="container m-5">
+        <div class="row">
+            <div class="col-lg">
+                col is auto width
+            </div>
+            <div class="col-lg-8">
+                col for 8
+            </div>
+            <div class="col-lg">
+                col is auto width
+            </div>
+        </div>
+    </div> -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+
+</html>

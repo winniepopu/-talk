@@ -1,0 +1,449 @@
+* {
+    font-family: '微軟正黑體';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.card-info {
+    padding: 0;
+}
+
+.cen {
+    margin: auto 0;
+    display: block;
+}
+
+.cen .container {
+    width: 95%;
+}
+
+div.info {
+    padding: 0 10px;
+}
+
+.tx-cen {
+    text-align: left;
+    margin-left: 20%;
+}
+
+.bk {
+    background-color: #f8f8f8;
+    /* background-size: cover; */
+    background-position: center center;
+    text-align: center;
+}
+
+.Rectangle-311 {
+    /* width: 1920px;
+    height: 148px; */
+    background-color: #F1E9EB;
+}
+
+#topMenu li {
+    font-family: Arial;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.15;
+    letter-spacing: normal;
+    text-align: center;
+    color: #88112d;
+}
+
+#storelist li {
+    list-style-type: none;
+    padding: 10px 50px;
+    font-family: '微軟正黑體';
+    font-size: 20px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.15;
+    letter-spacing: normal;
+    text-align: left;
+    color: #88112d;
+}
+
+.on-state,
+.off-state p {
+    line-height: 24px;
+}
+
+.sub {
+    line-height: 24px;
+}
+
+
+/*
+ * Navbar
+ */
+
+
+/* img {
+    width: 100%;
+} */
+
+a {
+    text-decoration: none;
+    color: #88112D;
+    /* nature black */
+}
+
+nav {
+    /* box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.3); */
+}
+
+.container,
+.container m-5 {
+    width: 90%;
+    margin: 0 auto;
+    /* horizontal center */
+}
+
+.container2 {
+    width: 95%;
+    margin: 0 auto;
+}
+
+section {
+    background-image: url(../../assets/media/wood3.jpg);
+    /* opacity:0.5; */
+    /* background-color: #f8f8f8; */
+    background-size: cover;
+    background-position: center center;
+    /* padding: 8rem 0; */
+    color: #fff;
+    text-align: center;
+}
+
+.logo {
+    width: 5rem;
+    padding: 0 0 0 0rem;
+}
+
+ul {
+    margin-bottom: 0rem;
+}
+
+nav li {
+    list-style: none;
+    padding: 1.5rem 1rem;
+    line-height: 3rem;
+}
+
+nav li:hover {
+    background-color: #e6e6e6;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* vertical center the elements e.g. logo */
+}
+
+
+/*
+ * Header
+ */
+
+header {
+    /* background-image: url(../../assets/media/header.jpg); */
+    background-color: #f8f8f8;
+    background-size: cover;
+    background-position: center center;
+    /* padding: 8rem 0; */
+    color: #fff;
+    text-align: center;
+}
+
+.title {
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+    padding: 3rem;
+    /* width: 412px;
+    height: 106px; */
+    /* font-family: Arial; */
+    /* font-size: 80px; */
+    font-weight: bold;
+    /* font-style: normal;
+    font-stretch: normal; */
+    line-height: 1.15;
+    letter-spacing: 9.6px;
+    text-align: center;
+    color: #88112d;
+}
+
+.title-bar {
+    height: 133px;
+}
+
+.title-bar2 {
+    height: 753px;
+}
+
+.intro {
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.mtb-4 {
+    margin: 4rem 0;
+}
+
+.mb-4 {
+    margin-bottom: 4rem;
+}
+
+.btn-intro {
+    padding: 0.5rem 2.5rem;
+    color: #fff;
+    background-color: #43a7a7;
+    border-radius: 3rem;
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.3);
+}
+
+
+/*
+ * Cards
+ */
+
+.cards {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.card-item {
+    width: 425px;
+    display: inline-block;
+    margin: 1rem;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.3);
+    background: #f8f8f8;
+}
+
+.card-item:hover {
+    box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.2), 0 5px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-item a:hover img {
+    opacity: 0.9;
+}
+
+.card-item .container {
+    margin: 1rem auto;
+}
+
+.card-title {
+    margin-bottom: 1rem;
+    color: rgba(0, 0, 0, 0.9);
+    font-weight: 300;
+}
+
+.card-intro {
+    color: rgba(0, 0, 0, 0.5);
+    font-style: italic;
+}
+
+
+/*
+ * Footer
+ */
+
+footer {
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #fff;
+}
+
+.copyright {
+    line-height: 50px;
+}
+
+
+/*
+ * Hamburger menu
+ */
+
+.ham {
+    display: none;
+}
+
+@media only screen and (max-width: 520px) {
+    .flex-between {
+        flex-direction: column;
+    }
+    .container .flex-between {
+        display: none;
+    }
+    nav li {
+        border-top: 1px solid gray;
+    }
+    .ham {
+        display: block;
+        position: absolute;
+        right: 2rem;
+        font-size: 1rem;
+    }
+    .container .flex-between.menu--active {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+/***************檢索業****************/
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    font-family: Verdana, sans-serif;
+    margin: 0
+}
+
+.mySlides {
+    display: none
+}
+
+img {
+    vertical-align: middle;
+}
+
+
+/* Slideshow container */
+
+.slideshow-container {
+    max-width: 90%;
+    position: relative;
+    margin: auto;
+}
+
+
+/* Next & previous buttons */
+
+.prev {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    left: 0;
+}
+
+
+/* Position the "next button" to the right */
+
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+
+/* On hover, add a black background color with a little bit see-through */
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* Caption text */
+
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+
+/* The dots/bullets/indicators */
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active {
+    background-color: #f8f8f8;
+}
+
+.dot:hover {
+    background-color: #717171;
+}
+
+
+/* Fading animation */
+
+.fade1 {
+    -webkit-animation-name: fade1;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade1;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade1 {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade1 {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+
+/* On smaller screens, decrease text size */
+
+@media only screen and (max-width: 300px) {
+    .prev,
+    .next,
+    .text {
+        font-size: 11px
+    }
+}
+
+
+/**************************silde*/
+
+
+/**檢索業*/

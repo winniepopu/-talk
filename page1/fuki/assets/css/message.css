@@ -1,0 +1,109 @@
+.container3 {
+  margin: 15px auto;
+  width: 500px;
+  padding: 20px 15px 0 15px;
+  width: 500px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  border-radius: 10px;
+}
+
+.button-group {
+  margin-bottom: 50px;
+}
+
+.counter {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 10px;
+}
+
+.posts {
+  clear: both;
+  list-style: none;
+  padding-left: 0;
+  width: 100%;
+}
+
+.posts li.comment {
+  /* background-color: #fff;
+  border: 0px solid #d12323;*/
+  margin: 0;
+  padding: 10px 0 10px 12px;
+  list-style: none;
+  background-color: white;
+  background-image: url(comment.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 20px;
+
+  /* background:url(wood3.jpg); */
+  /* background-color:#ffffff; */
+  /* border: 2px solid #ffffff;  */
+  padding-top: 10px;
+  padding-left: 100px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  word-wrap: break-word;
+  min-height: 42px;
+}
+
+.posts li.name {
+  /* width: 100px; */
+  /* list-style: square url(user.png); */
+  margin: 0;
+  /* padding: 10px 0 10px 12px; */
+  list-style: none;
+  background-color: white;
+  background-image: url(user.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 20px;
+
+  /* background:url(wood3.jpg); */
+  /* background-color:#ffffff; */
+  /* border: 2px solid #ffffff;  */
+  padding-top: 10px;
+  padding-left: 100px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  word-wrap: break-word;
+  min-height: 42px;
+}
+
+h2.messagetitle {
+  margin-bottom: 1rem;
+  color: rgb(167, 153, 153);
+  font-weight: 300;
+  margin-top: 0;
+}
+
+form textarea {
+  background: url(wood2.jpg);
+}
+
+.btn-open {
+  float: right;
+  position: static;
+  width: auto;
+}
+
+.btn-close {
+  float: right;
+  position: static;
+  width: auto;
+}
+
+.btn-submit {
+  position: static;
+  width: auto;
+}
+
+
+.gallery-section {
+  margin-top: 100px;
+}
+
+.media:first-child {
+  margin-top: 15px;
+}
